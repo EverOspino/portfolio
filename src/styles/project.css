@@ -1,0 +1,156 @@
+.project {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 1rem;
+}
+
+.project__titles {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+}
+
+.project__titles h1 {
+    font-size: 6rem;
+    margin: 0;
+    color: var(--main-bg-color);
+}
+
+.project__titles a {
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+.project__titles h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.project__description {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    white-space: pre-line;
+}
+
+.project__categories {
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .3rem;
+}
+
+.project__categories__list {
+    padding-left: 1rem;
+}
+
+.project__categories__list li {
+    margin: .5rem 0;
+}
+
+.project__tecnologies {
+    padding: 2rem 0 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.project__tecnologies__list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.project__tecnologies__list > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.slider_container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.slider {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.slider img {
+    object-fit: cover;
+}
+
+.scroll_behavior {
+    scroll-behavior: smooth;
+}
+
+.btn_slider {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.btn_slider button {
+    padding: 0;
+    border: 2px solid var(--button-color);
+    outline: none;
+    background: none;
+    color: var(--button-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    border-radius: 50%;
+    width: 2.5rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (min-width: 992px) {
+    .project {
+        padding-top: 3rem;
+    }
+
+    .content_tecnologies, .project__tecnologies__list {
+        justify-content: start;
+    }
+
+    .project__titles {
+        align-items: start;
+        text-align: start;
+    }
+
+    .text_container {
+        font-size: 1rem;
+    }
+
+    .project__categories, .project__tecnologies {
+        align-items: start;
+    }
+}
+
+@media (min-width: 1400px) {
+    .project {
+        padding-top: 5rem;
+    }
+}
