@@ -79,8 +79,6 @@
 
 .slider_container {
     position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9;
 }
 
 .slider {
@@ -88,10 +86,12 @@
     width: 100%;
     display: flex;
     overflow-x: hidden;
+    transition: 2s ease-in-out;
 }
 
 .slider img {
     object-fit: cover;
+    transition: 2s ease-in-out;
 }
 
 .scroll_behavior {
