@@ -1,5 +1,6 @@
 ---
 import '../../styles/header.css';
+const {info} = Astro.props;
 ---
 <section class="section header header-bg">
     <span class="section__overlay"></span>
@@ -12,9 +13,13 @@ import '../../styles/header.css';
                 <span></span>
                 <img class="section__content__logo" src="images/assets/logo.svg" alt="">
                 <div class="section__content__name-container">
-                    <h1 class="display-5">Ever Ospino</h1>
+                    <h1 class="display-5">{info.name}</h1>
                 </div>
-                <p>Desarrollador Web</p>
+                <p>{info.rol}</p>
+                <a class="section__content__github" title="Visita mi github" href={info.github}>
+                    <img src="/images/tecnologies/github_icon.svg" alt="github icon">
+                    Github
+                </a>
             </div>
         </div>
     </div>

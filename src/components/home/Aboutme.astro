@@ -1,28 +1,30 @@
 ---
 import '../../styles/aboutme.css';
-const {tecnologies} = Astro.props;
+const {tecnologies, info} = Astro.props;
 ---
 <section class="section">
     <article class="container aboutme">
-        <div class="row justify-content-center order-last order-lg-first">
+        <div class="row justify-content-center">
+            <div class="col col-8 col-md-7 col-lg-4 aboutme__images">
+                <h1 class="display-4">{info.name}</h1>
+                <div class="aboutme__images__face">
+                    <!-- <img src="images/assets/frame.svg" alt="frame top"> -->
+                    <img src="images/assets/imgprofile.svg" alt="profile photo">
+                    <img src="images/assets/frame.svg" alt="frame botton">
+                </div>
+            </div>
             <div class="col col-11 col-lg-5 aboutme__text">
-                <h1 class="display-3">Ever Ospino</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium iusto nostrum dolore consectetur sint vel suscipit qui soluta. Deserunt facilis nobis perferendis veniam voluptates quos rem, ea quidem. Cum, modi!</p>
+                <p>{info.description}</p>
                 <div class="aboutme__text__tecnologies">
                     { tecnologies.map(tecnology => {
                         if (tecnology.applied) {
                             return (<div>
-                                <img src={"/images/tecnologies/"+tecnology.icon} alt="tecnology icon">
+                                <img src={"/images/tecnologies/"+tecnology.icon} alt="tecnology icon" />
                                 <span>{tecnology.name}</span>
                             </div>)
                         }
                     }) }
                 </div>
-            </div>
-            <div class="col col-8 col-md-7 col-lg-4 order-first order-lg-last aboutme__images">
-                <img src="images/assets/frame.svg" alt="frame top">
-                <img src="images/assets/imgprofile.svg" alt="profile photo">
-                <img src="images/assets/frame.svg" alt="frame botton">
             </div>
         </div>
     </article>

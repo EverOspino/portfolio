@@ -17,7 +17,7 @@
 .project__titles h1 {
     font-size: 6rem;
     margin: 0;
-    color: var(--main-bg-color);
+    color: var(--bg-color);
 }
 
 .project__titles a {
@@ -34,6 +34,7 @@
     font-size: 1.1rem;
     margin-top: 1rem;
     white-space: pre-line;
+    color: var(--font-text-color-secondary);
 }
 
 .project__categories {
@@ -111,10 +112,10 @@
 
 .btn_slider button {
     padding: 0;
-    border: 2px solid var(--button-color);
     outline: none;
-    background: none;
-    color: var(--button-color);
+    border: none;
+    background-color: var(--button-color);
+    color: var(--font-color);
     font-size: 1.5rem;
     font-weight: 500;
     border-radius: 50%;
@@ -123,6 +124,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 

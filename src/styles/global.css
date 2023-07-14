@@ -1,7 +1,9 @@
 :root {
-    --main-bg-color: #153131;
+    --main-bg-color: #F7F7F7;
+    --bg-color: #153131;
     --font-color: #ffffff;
     --font-text-color: #333333;
+    --font-text-color-secondary: #6b6b6b;
     --button-color: #006F6F;
     --border-color: #D9D9D9;
 }
@@ -104,6 +106,7 @@
 .main-bg {
     width: 100%;
     background: url('../images/assets/bg-pattern.svg');
+    background-color: var(--main-bg-color);
     background-repeat: repeat;
 }
 

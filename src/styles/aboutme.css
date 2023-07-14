@@ -11,22 +11,37 @@
     text-align: center;
 }
 
-.aboutme__images {
-    padding: 0 3rem 1rem 3rem;
+.aboutme__text p {
+    color: var(--font-text-color-secondary);
 }
 
-.aboutme__images > img:nth-child(3) {
+.aboutme__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme__images__face {
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: .3rem;
+}
+
+.aboutme__images__face img {
+    width: 100%;
+}
+.aboutme__images__face > img:nth-child(2) {
+    position: relative;
+    bottom: 1rem;
     margin-top: 1.6rem;
     transform: rotate(180deg);
 }
 
-.aboutme__images > img {
-    width: 100%;
-}
-
 .aboutme__text__tecnologies {
     width: 100%;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     gap: 1.5rem;

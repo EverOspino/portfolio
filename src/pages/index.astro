@@ -4,20 +4,22 @@ import Header from '../components/home/Header.astro';
 import Aboutme from '../components/home/Aboutme.astro';
 import Projects from '../components/home/Projects.astro';
 
+const aboutme = {name: 'Ever Ospino', rol: 'Desarrollador Web', description: 'Soy un Ingeniero de sistemas centrado en el desarrollo web. Me enfoco en la creación de software de alta calidad combinándolo con una visión artística para así crear propuestas atractivas, robustas y de alto rendimiento. Cada proyecto en el que me embarco es una oportunidad para tomar un nuevo desafío, aprender algo nuevo y mejorar mis habilidades.', github: 'https://github.com/EverOspino'}
+
 const tecnologies = [
     { name: 'HTML5', icon: 'html5_icon.svg', applied: true },
     { name: 'CSS3', icon: 'css3_icon.svg', applied: true },
     { name: 'JavaScript', icon: 'javascript_icon.svg', applied: true },
     { name: 'React JS', icon: 'react_icon.svg', applied: true },
     { name: 'PHP', icon: 'php_icon.svg', applied: true },
-    { name: 'Bootstrap', icon: 'bootstrap_icon.svg', applied: true },
+    { name: 'Bootstrap', icon: 'bootstrap_icon.svg', applied: false },
     { name: 'MySQL', icon: 'mysql_icon.svg', applied: true },
     { name: 'Vue JS', icon: 'vue_icon.svg', applied: false },
-    { name: 'Figma', icon: 'figma_icon.svg', applied: true },
-    { name: 'Firebase', icon: 'firebase_icon.svg', applied: true },
+    { name: 'Figma', icon: 'figma_icon.svg', applied: false },
+    { name: 'Firebase', icon: 'firebase_icon.svg', applied: false },
     { name: 'Node JS', icon: 'nodejs_icon.svg', applied: true },
     { name: 'Vuetify', icon: 'vuetify_icon.svg', applied: false },
-    { name: 'Express JS', icon: 'express_icon.svg', applied: true },
+    { name: 'Express JS', icon: 'express_icon.svg', applied: false },
     { name: 'Astro JS', icon: 'astro_icon.svg', applied: true },
     { name: 'Nest JS', icon: 'nestjs_icon.svg', applied: false }
 ];
@@ -32,7 +34,7 @@ const projects = [
 ---
 
 <Layout>
-    <Header />
-    <Aboutme tecnologies={tecnologies} />
+    <Header info={aboutme} />
     <Projects projects={projects} />
+    <Aboutme tecnologies={tecnologies} info={aboutme} />
 </Layout>
