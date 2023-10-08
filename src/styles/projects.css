@@ -49,9 +49,21 @@
     color: var(--font-text-color-secondary);
 }
 
+.projects__card__anchor {
+    width: 100%;
+    padding-top: .5rem;
+    display: flex;
+}
+
+.projects__card__anchor a {
+    text-decoration: none;
+    color: var(--button-color);
+    font-size: 1.04rem;
+}
+
 .projects__card__button {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     justify-content: end;
 }

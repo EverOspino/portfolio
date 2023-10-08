@@ -83,7 +83,7 @@
 }
 
 .slider {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 4 / 3;
     width: 100%;
     display: flex;
     overflow-x: hidden;

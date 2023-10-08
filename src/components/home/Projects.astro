@@ -18,8 +18,11 @@ const {projects} = Astro.props;
                             <div class="projects__card__text">
                                 <p>{project.description}</p>
                             </div>
+                            <div class="projects__card__anchor">
+                                <a href={"/project/"+project.id}>Ver más</a>    
+                            </div>
                             <div class="projects__card__button">
-                                <a class="button-outline" href={"/project/"+project.id}>Ver más</a>
+                                <a class="button-outline" href={project.url}>Visitar sitio</a>
                             </div>
                         </div>
                     </div>
